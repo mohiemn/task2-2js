@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Q8</h1>
+    <button onclick="calculate()">calculate</button>
+    <p id="answer"></p>
+    <script>
+        function calculate() {
+            let num1 = parseFloat(prompt("Enter your first number:"));
+            let operation = prompt("Enter your operation:");
+            let num2 = parseFloat(prompt("Enter your first number:"));
+            let result;
+            if (isNaN(num1) || isNaN(num2) || operation !== "+" && operation !== "-" && operation !== "*" && operation !== "/") {
+                alert("Please enter valid numbers or operation");
+            }
+            switch (operation) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    if (num2 === 0) {
+                        errorMessage = "Cannot divide by zero.";
+                    } else {
+                        result = num1 / num2;
+                    }
+                    break;
+            }
+            document.getElementById("answer").innerHTML = `${num1} <b>${operation}</b> ${num2} = <b>${result}</b>`;
+        }
+
+    </script>
+</body>
+
+</html>

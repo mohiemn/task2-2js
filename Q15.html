@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q15</title>
+</head>
+
+<body>
+    <h1>Q15</h1>
+    <button onclick="grade()">Task 15: Grade Evaluation System</button>
+    <p id="answer"></p>
+    <script>
+        function grade() {
+            let mark =0;
+            let tot  = 0 ;
+            for (let index = 0; index < 5; index++) {
+                mark = parseFloat(prompt("Enter your marks:"));
+                tot += mark;
+            }
+            let res;
+            let avg = tot / 5;
+            if (isNaN(mark)) {
+                alert("invalid input");
+            } else if (avg >= 60) {
+                res = "pass";
+            } else {
+                res = "fail";
+            }
+            document.getElementById("answer").innerHTML = `your final result is :  <b>${res}</b> `;
+        }
+    </script>
+</body>
+
+</html>

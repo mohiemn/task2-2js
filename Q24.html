@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q24</title>
+</head>
+
+<body>
+    <h1>Q24</h1>
+    <button onclick="number()">number</button>
+    <p id="answer"></p>
+    <script>
+        function number(){
+            let num1 = parseInt(prompt("Enter the side 1"));
+            let num2 = parseInt(prompt("Enter the side 2"));
+            let num3 = parseInt(prompt("Enter the side 3"));
+            let result ;
+            if (num1*num1 >= (num2*num2 + num3*num3 )|| num2*num2 >= (num1*num1 + num3*num3 )|| num3*num3 >= (num1*num1 + num2*num2) ){
+                alert("The triangle is not valid.");
+            }else {
+                alert("The triangle is valid.");
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

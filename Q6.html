@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6</title>
+</head>
+
+<body>
+    <h1>Q6</h1>
+    <button onclick="Temperature ()">Temperature Conversion</button>
+    <p id="answer"></p>
+    <script>
+        function Temperature () {
+            let Tempe = parseFloat(prompt("Enter the Temperature"));
+            let result;
+            if (isNaN(Tempe)) {
+                alert("NAN");
+            } else if (Tempe<0){
+                result = 'below freezing';
+            }else if (Tempe >= 100){
+                result = 'below boling';
+            }else {
+                result="normal";
+            }
+            let fih = (Tempe * 9.0/5)+ 32;
+            document.getElementById("answer").innerHTML = `Your cuurent Temperature :<b>${result}</b> , ${fih}`;
+        }
+    </script>
+</body>
+
+</html>

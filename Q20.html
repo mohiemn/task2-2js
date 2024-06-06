@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q20</title>
+</head>
+
+<body>
+    <h1>Q20</h1>
+    <button onclick="hotel()">Task 20: Multiplication Table Generator
+    </button>
+    <script>
+        function hotel() {
+            let number =parseInt(prompt("Enter a number:")) ;
+            if (!isNaN(number)) {
+                document.writeln("Multiplication table for", number, ":<br>");
+                for (let i = 1; i <= 10; i++) {
+                    document.writeln(number, "*", i, "=", number * i , "<br>");
+                }
+            } else {
+                console.log("Invalid input. Please enter a valid number.");
+            }
+
+        }
+    </script>
+</body>
+
+</html>

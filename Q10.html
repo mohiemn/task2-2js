@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Q10</h1>
+    <button onclick="Teacher()">Teacher</button>
+    <p id="answer"></p>
+    <script>
+        function Teacher() {
+            var userType = prompt("Are you a student or a teacher?").toLowerCase();
+            var booknum = parseInt(prompt("How many books do you want to borrow?"));
+            var minLimit = 3;
+            var maxLimit = 5;
+            var message;
+            if (userType === "student") {
+                if (booknum <= minLimit) {
+                    message = "Your loan is approved.";
+                } else {
+                    message = "Sorry, students can borrow up to " + minLimit + " books";
+                }
+            } else if (userType === "teacher") {
+                if (booknum <= maxLimit) {
+                    message = "Your loan is approved.";
+                } else {
+                    message = "Sorry, teachers can borrow up to " + maxLimit + " books";
+                }
+            } else {
+                message = "Invalid user type, Please enter 'student' or 'teacher'.";
+            }
+            window.alert(message);
+        }
+    </script>
+</body>
+
+</html>

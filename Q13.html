@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q13</title>
+</head>
+
+<body>
+    <h1>Q13</h1>
+    <button onclick="typemov()">Movie Ticket Pricing </button>
+    <p id="answer"></p>
+    <script>
+        function typemov() {
+            let age = parseFloat(prompt("Enter the age"));
+            let type = (prompt("Enter the type : (Regular, 3D)")).toLowerCase;
+            let result;
+            if (isNaN(age)) {
+                alert("NAN");
+            }else if (age <= 12 ){
+                result ="get discount";
+            } else if (type === "3d"){
+                result="cost more";
+            }else {
+                result ="no discount ...  !";
+            }
+            document.getElementById("answer").innerHTML = `<b>${result}</b> `;
+        }
+    </script>
+</body>
+
+</html>

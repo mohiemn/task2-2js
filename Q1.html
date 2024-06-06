@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    <h1>Q1</h1>
+    <input type="number" id="height" placeholder="Enter height ">
+    <input type="number" id="weight" placeholder="Enter weight">
+    <button onclick="display()">Click</button>
+    <p id="answer"></p>
+
+    <script>
+        function display() {
+            let height = parseFloat(document.getElementById("height").value);
+            let weight = parseFloat(document.getElementById("weight").value);
+            height = height/100;
+            let result = (weight)/(height*height);
+            let result1 = "";
+            if (isNaN(height) || isNaN(weight)) {
+                alert("Please enter valid numbers");
+            }else if (result <= 18.5){
+                result1 = "Mild Thinness";
+            }
+            else if (result >= 18.5 && result <=24.9){
+                result1 = "Normal";
+            }else if (result >= 25 && result <=29.9){
+                result1 = "Overweight";
+            }else if (result >= 30 && result <=34.9){
+                result1 = "Obese Class I";
+            }else if (result >= 35 && result <=39.9){
+                result1 = "Obese Class II";
+            }else if (result >= 40){
+                result1 = "Obese Class III";
+            }
+            document.getElementById("answer").innerHTML = `yor BMI = ${result} state : <b>${result1}</b>`; 
+        }
+    </script>
+</body>
+</html>

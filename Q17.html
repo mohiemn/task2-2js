@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q17</title>
+</head>
+
+<body>
+    <h1>Q17</h1>
+    <button onclick="Traffic()">Task 17: Traffic Light Simulator</button>
+    <p id="answer"></p>
+    <script>
+        function Traffic() {            
+            let currentcolor = prompt("Enter current color of a traffic light (Red, Yellow, Green)");
+            if(currentcolor==="Red"){
+                alert("Stop");
+            }else if(currentcolor==="Yellow"){
+                alert("Slow");
+            }else if(currentcolor==="Green"){
+                alert("Go");
+            }else {
+                alert("Invalid input");
+            }
+        }
+    </script>
+</body>
+
+</html>

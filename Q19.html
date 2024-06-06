@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q19</title>
+</head>
+
+<body>
+    <h1>Q19</h1>
+    <button onclick="hotel()">Task 19: Hotel Room Booking</button>
+    <script>
+        function hotel() { 
+            let singleroom = 5;
+            let doubleroom = 10;
+            let suiteroom = 15;           
+            let room = prompt("to input the type of room they want to book (Single, Double, Suite) ");
+            let day = parseInt(prompt("Enter number of day "));
+            if(isNaN(day)){
+                alert("invalid input");
+            }else if(room =="Single"){
+                alert(room + " room for " + day +" cost : " + singleroom*day);
+            }else if(room =="Double"){
+                alert(room + " room for " + day +" cost : " + doubleroom*day);
+            }else if(room =="Suite"){
+                alert(room + " room for " + day +" cost : " + doubleroom*day);
+            }
+        }
+    </script>
+</body>
+
+</html>

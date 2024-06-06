@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q12</title>
+</head>
+
+<body>
+    <h1>Q12</h1>
+    <button onclick="Temperature ()">Temperature </button>
+    <p id="answer"></p>
+    <script>
+        function Temperature () {
+            let Tempe = parseFloat(prompt("Enter the Temperature"));
+            let result;
+            if (isNaN(Tempe)) {
+                alert("NAN");
+            } else if (Tempe<0){
+                result = 'Very Cold';
+            }else if (Tempe>=0 && Tempe <=15 ){
+                result = 'Cold';
+            }else if (Tempe > 15 && Tempe <=25 ){
+                result = 'Warm';
+            }
+            else if (Tempe>25 ){
+                result = 'Hot';
+            }
+            document.getElementById("answer").innerHTML = `Your cuurent Temperature :<b>${result}</b> `;
+        }
+    </script>
+</body>
+
+</html>
